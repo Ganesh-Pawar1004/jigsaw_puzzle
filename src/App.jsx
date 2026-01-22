@@ -3,6 +3,7 @@ import { DndContext, DragOverlay, MouseSensor, TouchSensor, useSensor, useSensor
 import { PuzzleBoard } from './components/PuzzleBoard';
 import { PuzzlePiece } from './components/PuzzlePiece';
 import SetupScreen from './components/SetupScreen';
+import { generatePuzzle, generateSwapPuzzle, generateScoreCard, DIFFICULTY_SETTINGS } from './utils/GameManager';
 import { RefreshCw, Trophy, Clock, Move, Github, Twitter, Globe } from 'lucide-react';
 
 function App() {
