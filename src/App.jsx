@@ -3,9 +3,7 @@ import { DndContext, DragOverlay, MouseSensor, TouchSensor, useSensor, useSensor
 import { PuzzleBoard } from './components/PuzzleBoard';
 import { PuzzlePiece } from './components/PuzzlePiece';
 import SetupScreen from './components/SetupScreen';
-import { generatePuzzle, generateSwapPuzzle, generateScoreCard, DIFFICULTY_SETTINGS } from './utils/GameManager';
-import { RefreshCw, Trophy, Clock, Move } from 'lucide-react';
-// import Confetti from 'react-confetti';
+import { RefreshCw, Trophy, Clock, Move, Github, Twitter, Globe } from 'lucide-react';
 
 function App() {
   const [appState, setAppState] = useState('setup'); // setup | play | win
@@ -373,9 +371,31 @@ function App() {
           </DndContext>
         </div>
       )}
-      {/* Developer Signature */}
-      <div className="fixed bottom-3 right-4 text-white/50 text-xs font-light tracking-widest select-none pointer-events-none z-50 opacity-60 hover:opacity-100 transition-opacity">
-        Made by Ganesh Pawar
+      {/* Developer Signature & Socials */}
+      <div className="fixed bottom-3 right-4 z-50 flex flex-col items-end gap-1 opacity-60 hover:opacity-100 transition-opacity">
+        <div className="text-white/50 text-xs font-light tracking-widest select-none pointer-events-none mb-1">
+          Made by Ganesh Pawar
+        </div>
+        <div className="flex gap-3">
+          <a
+            href="https://github.com/Ganesh-Pawar1004"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-blue-400 transition-colors bg-gray-800/80 p-1.5 rounded-full shadow-lg backdrop-blur-sm"
+            title="GitHub Profile"
+          >
+            <Github size={16} />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-blue-400 transition-colors bg-gray-800/80 p-1.5 rounded-full shadow-lg backdrop-blur-sm"
+            title="Twitter / X"
+          >
+            <Twitter size={16} />
+          </a>
+        </div>
       </div>
     </div>
   );
